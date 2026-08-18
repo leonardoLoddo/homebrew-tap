@@ -11,12 +11,23 @@ class HydraHeads < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/leonardoLoddo/hydra/releases/download/v0.1.0/hydra-0.1.0-aarch64-apple-darwin.tar.gz"
-      sha256 "07b6ae29cfd7ad9c050c724e116c7b573f8415e00e6f41a47f69f7cc71fa18ce"
+      url "https://github.com/leonardoLoddo/hydra/releases/download/v0.1.1/hydra-0.1.1-aarch64-apple-darwin.tar.gz"
+      sha256 "d51400fa5fd8b1f9034b950cf7d70f551930d45eb2322758a5546176071e2934"
     end
     on_intel do
-      url "https://github.com/leonardoLoddo/hydra/releases/download/v0.1.0/hydra-0.1.0-x86_64-apple-darwin.tar.gz"
-      sha256 "209523b65c3e4de7946af7191a968ec6b5856ff7a70bcece1d34ec903263f361"
+      url "https://github.com/leonardoLoddo/hydra/releases/download/v0.1.1/hydra-0.1.1-x86_64-apple-darwin.tar.gz"
+      sha256 "a33b1c3d3fbf646e6d3cde7af978bcc54fdcf0f8778b674b5d1240eff7c8cb1b"
+    end
+  end
+
+  on_linux do
+    on_arm do
+      url "https://github.com/leonardoLoddo/hydra/releases/download/v0.1.1/hydra-0.1.1-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "5a225b23a1efa0988fecf0366b83d1b3d9065ec624f94df0a49cf098a05571db"
+    end
+    on_intel do
+      url "https://github.com/leonardoLoddo/hydra/releases/download/v0.1.1/hydra-0.1.1-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "509369ebff6acc166a6a3dc800460ed675593d40e41033be15c32be692123230"
     end
   end
 
