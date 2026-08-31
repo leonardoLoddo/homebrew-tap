@@ -11,23 +11,23 @@ class HydraHeads < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/leonardoLoddo/hydra/releases/download/v0.2.0/hydra-0.2.0-aarch64-apple-darwin.tar.gz"
-      sha256 "6fdbbc14fe6bf6ffd8e173d97d3aba1fdb31f51ebb8d63122e08a11123e8f5db"
+      url "https://github.com/leonardoLoddo/hydra/releases/download/v1.0.0/hydra-1.0.0-aarch64-apple-darwin.tar.gz"
+      sha256 "b47d82065cb947575ad570893c912481bf33b82b29e594fb5529e435648d4738"
     end
     on_intel do
-      url "https://github.com/leonardoLoddo/hydra/releases/download/v0.2.0/hydra-0.2.0-x86_64-apple-darwin.tar.gz"
-      sha256 "d83826ad7e8efbd38c51085f613f7209cdab969894a309a331cf659864e796c6"
+      url "https://github.com/leonardoLoddo/hydra/releases/download/v1.0.0/hydra-1.0.0-x86_64-apple-darwin.tar.gz"
+      sha256 "44ca35e67495798193959d8953f33723904d11189aa04cec5ad0fc76510aca4a"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/leonardoLoddo/hydra/releases/download/v0.2.0/hydra-0.2.0-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "5c8591c804ad258ddc9450d4c66e1e24f585d78394bcca701e14f0506d8e9406"
+      url "https://github.com/leonardoLoddo/hydra/releases/download/v1.0.0/hydra-1.0.0-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "749870a20458c6b7d3ec17916df5622a5fd7d3302feb8c2860f110ffcd7be907"
     end
     on_intel do
-      url "https://github.com/leonardoLoddo/hydra/releases/download/v0.2.0/hydra-0.2.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "a6951872c714433f542188ee973b12c5c5999f1d9c6db125b495e424cbfd38e4"
+      url "https://github.com/leonardoLoddo/hydra/releases/download/v1.0.0/hydra-1.0.0-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "4e6183cc3b97928f81f041e390d629ce5fbe074acb67089468a08f77cff2f994"
     end
   end
 
@@ -36,6 +36,7 @@ class HydraHeads < Formula
 
   def install
     bin.install "hydra"
+    generate_completions_from_executable(bin/"hydra", shell_parameter_format: :clap)
     pkgshare.install "hydra-art.txt"
     pkgshare.install "skills"
     pkgshare.install "LICENSE", "LICENSE-MIT", "LICENSE-APACHE"
