@@ -11,23 +11,23 @@ class HydraHeads < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/leonardoLoddo/hydra/releases/download/v1.0.0/hydra-1.0.0-aarch64-apple-darwin.tar.gz"
-      sha256 "b47d82065cb947575ad570893c912481bf33b82b29e594fb5529e435648d4738"
+      url "https://github.com/leonardoLoddo/hydra/releases/download/v1.1.0/hydra-1.1.0-aarch64-apple-darwin.tar.gz"
+      sha256 "fbd3f2af26c364d9067fab92d70c2a76283975d709cbff5b985f99f630bef542"
     end
     on_intel do
-      url "https://github.com/leonardoLoddo/hydra/releases/download/v1.0.0/hydra-1.0.0-x86_64-apple-darwin.tar.gz"
-      sha256 "44ca35e67495798193959d8953f33723904d11189aa04cec5ad0fc76510aca4a"
+      url "https://github.com/leonardoLoddo/hydra/releases/download/v1.1.0/hydra-1.1.0-x86_64-apple-darwin.tar.gz"
+      sha256 "ba6f698b2a4b1b8019d24aa5096ebd64522d28fac0b61738e701dfa7f35e4e6a"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/leonardoLoddo/hydra/releases/download/v1.0.0/hydra-1.0.0-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "749870a20458c6b7d3ec17916df5622a5fd7d3302feb8c2860f110ffcd7be907"
+      url "https://github.com/leonardoLoddo/hydra/releases/download/v1.1.0/hydra-1.1.0-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "d2145ccacfcc220e818f698bfc489143e5b4ef0228921c2cf4907543eefa2fe1"
     end
     on_intel do
-      url "https://github.com/leonardoLoddo/hydra/releases/download/v1.0.0/hydra-1.0.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "4e6183cc3b97928f81f041e390d629ce5fbe074acb67089468a08f77cff2f994"
+      url "https://github.com/leonardoLoddo/hydra/releases/download/v1.1.0/hydra-1.1.0-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "1e1443d7f815a8199c18562bc615ad8b33a214d5943a391e562f6e3c62362a08"
     end
   end
 
@@ -44,7 +44,17 @@ class HydraHeads < Formula
 
   def caveats
     art = (pkgshare/"hydra-art.txt").read
-    "#{art}\nGet started:\n  hydra --help\n\nOptional Codex skill:\n  hydra skill install codex\n"
+    <<~EOS
+      #{art}
+      Get started:
+        hydra --help
+
+      Optional AI-agent skill (choose a provider):
+        hydra skill install codex
+        hydra skill install gemini
+        hydra skill install agy
+        hydra skill install antigravity
+    EOS
   end
 
   test do
